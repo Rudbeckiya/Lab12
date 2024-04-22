@@ -3,515 +3,694 @@
 		"_postman_id": "4f38790e-131e-41f5-ac0a-1720bdd6189d",
 		"name": "Lab12",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30353259"
+		"_exporter_id": "30353259",
+		"_collection_link": "https://www.postman.com/presetting/workspace/lab12/collection/30353259-4f38790e-131e-41f5-ac0a-1720bdd6189d?action=share&source=collection_link&creator=30353259"
 	},
 	"item": [
 		{
 			"name": "Действия с двумя числами",
 			"item": [
 				{
-					"name": "Сложение (целое)",
-					"event": [
+					"name": "Корректные данные",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"10\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/add/5/5?mode=int",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"add",
-								"5",
-								"5"
-							],
-							"query": [
+							"name": "Сложение (целое)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "int"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"10\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/add/5/5?mode=int",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"add",
+										"5",
+										"5"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Сложение (дробь)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"10.1\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/add/2.3/7.8?mode=float",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"add",
+										"2.3",
+										"7.8"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Вычитание (целое)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"-42\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/sub/29/71?mode=int",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sub",
+										"29",
+										"71"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Вычитание (дробь)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"420.604\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/sub/435.246/14.642?mode=float",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sub",
+										"435.246",
+										"14.642"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Умножение (целое)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"825\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/mul/25/33?mode=int",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mul",
+										"25",
+										"33"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Умножение (дробь)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"882.5\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/mul/2.5/353?mode=float",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mul",
+										"2.5",
+										"353"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Деление (целое)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"5.0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/div/15/3?mode=int",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"div",
+										"15",
+										"3"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Деление (дробь)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"37.850007467997436\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/div/172322/4552.76?mode=float",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"div",
+										"172322",
+										"4552.76"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Остаток от деления (целое)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"51\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/mod/273/111?mode=int",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mod",
+										"273",
+										"111"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Остаток от деления (дробь)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"1.5\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/mod/23.5/2?mode=float",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mod",
+										"23.5",
+										"2"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Возведение в степень (целое)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"256\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/pow/2/8?mode=int",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"pow",
+										"2",
+										"8"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Возведение в степень (дробь)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"882.2385062500001\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/pow/5.45/4?mode=float",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"pow",
+										"5.45",
+										"4"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "Сложение (дробь)",
-					"event": [
+					"name": "Проверка исключений",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"10.1\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/add/2.3/7.8?mode=float",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"add",
-								"2.3",
-								"7.8"
-							],
-							"query": [
+							"name": "Деление на ноль (целое)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "float"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"Can't divide by null\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Вычитание (целое)",
-					"event": [
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/div/5/0?mode=int",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"div",
+										"5",
+										"0"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"-42\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/sub/29/71?mode=int",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"sub",
-								"29",
-								"71"
-							],
-							"query": [
+							"name": "Деление на ноль (дробь)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "int"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"Can't divide by null\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Вычитание (дробь)",
-					"event": [
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/div/5.5/0?mode=float",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"div",
+										"5.5",
+										"0"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						},
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"420.604\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/sub/435.246/14.642?mode=float",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"sub",
-								"435.246",
-								"14.642"
-							],
-							"query": [
+							"name": "Остаток от деления на ноль (дробь)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "float"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"Can't divide by null\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Умножение (целое)",
-					"event": [
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/mod/7.52/0?mode=float",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mod",
+										"7.52",
+										"0"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						},
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"825\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/mul/25/33?mode=int",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"mul",
-								"25",
-								"33"
-							],
-							"query": [
+							"name": "Остаток от деления на ноль (целое)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "int"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"Can't divide by null\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Умножение (дробь)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"882.5\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/mul/2.5/353?mode=float",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
 							],
-							"path": [
-								"mul",
-								"2.5",
-								"353"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "float"
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/mod/53/0?mode=int",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mod",
+										"53",
+										"0"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										}
+									]
 								}
-							]
+							},
+							"response": []
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Деление (целое)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"5.0\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/div/15/3?mode=int",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"div",
-								"15",
-								"3"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "int"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Деление (дробь)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"37.850007467997436\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/div/172322/4552.76?mode=float",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"div",
-								"172322",
-								"4552.76"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "float"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Остаток от деления (целое)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"51\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/mod/273/111?mode=int",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"mod",
-								"273",
-								"111"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "int"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Остаток от деления (дробь)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"1.5\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/mod/23.5/2?mode=float",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"mod",
-								"23.5",
-								"2"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "float"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Возведение в степень (целое)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"256\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/pow/2/8?mode=int",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"pow",
-								"2",
-								"8"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "int"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Возведение в степень (дробь)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"882.2385062500001\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/pow/5.45/4?mode=float",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"pow",
-								"5.45",
-								"4"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "float"
-								}
-							]
-						}
-					},
-					"response": []
+					]
 				}
 			]
 		},
@@ -519,356 +698,546 @@
 			"name": "Действия с одним числом",
 			"item": [
 				{
-					"name": "Извлечения корня (целое)",
-					"event": [
+					"name": "Корректные данные",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"4\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/sqrt/16?mode=int",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"sqrt",
-								"16"
-							],
-							"query": [
+							"name": "Извлечения корня (целое)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "int"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"4\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/sqrt/16?mode=int",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sqrt",
+										"16"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Извлечение корня (дробь)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"4.242640687119285\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/sqrt/18?mode=float",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sqrt",
+										"18"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Синус (целое, радианы)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"-0.13235175009777303\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/sin/25?mode=int&rad=yes",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sin",
+										"25"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										},
+										{
+											"key": "rad",
+											"value": "yes"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Синус (дробь, градусы)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"0.981627183447664\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/sin/79?mode=float&rad=no",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sin",
+										"79"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										},
+										{
+											"key": "rad",
+											"value": "no"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Косинус (целое, радианы)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"0.9625976995964054\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/cos/327?mode=int&rad=yes",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"cos",
+										"327"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										},
+										{
+											"key": "rad",
+											"value": "yes"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Косинус (дробь, градусы)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"0.6530241527544608\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/cos/49.23?mode=float&rad=no",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"cos",
+										"49.23"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										},
+										{
+											"key": "rad",
+											"value": "no"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Тангенс (целое, радианы)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"3.17658221611215\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/tan/3856?mode=int&rad=yes",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan",
+										"3856"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "int"
+										},
+										{
+											"key": "rad",
+											"value": "yes"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Тангенс (дробь, градусы)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"0.049574742257696064\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/tan/2.8381?mode=float&rad=no",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan",
+										"2.8381"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										},
+										{
+											"key": "rad",
+											"value": "no"
+										}
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "Извлечение корня (дробь)",
-					"event": [
+					"name": "Проверка исключений",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"4.242640687119285\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/sqrt/18?mode=float",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"sqrt",
-								"18"
-							],
-							"query": [
+							"name": "Тангенс Pi/2 (дробь, радианы)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "float"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"Can't calculate tangens for this number\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Синус (целое, радианы)",
-					"event": [
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/tan/1.5707963267948966192313216916398?mode=float&rad=yes",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan",
+										"1.5707963267948966192313216916398"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										},
+										{
+											"key": "rad",
+											"value": "yes"
+										}
+									]
+								}
+							},
+							"response": []
+						},
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"-0.13235175009777303\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/sin/25?mode=int&rad=yes",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"sin",
-								"25"
-							],
-							"query": [
+							"name": "Тангенс Pi/2 (дробь, градусы)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "int"
-								},
-								{
-									"key": "rad",
-									"value": "yes"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"Can't calculate tangens for this number\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Синус (дробь, градусы)",
-					"event": [
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/tan/1.5707963267948966192313216916398?mode=float&rad=no",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan",
+										"1.5707963267948966192313216916398"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										},
+										{
+											"key": "rad",
+											"value": "no"
+										}
+									]
+								}
+							},
+							"response": []
+						},
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"0.981627183447664\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/sin/79?mode=float&rad=no",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"sin",
-								"79"
-							],
-							"query": [
+							"name": "Тангенс 3Pi/2 (дробь, радианы)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "float"
-								},
-								{
-									"key": "rad",
-									"value": "no"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"Can't calculate tangens for this number\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Косинус (целое, радианы)",
-					"event": [
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/tan/4.7123889803846898576939650749193?mode=float&rad=yes",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan",
+										"4.7123889803846898576939650749193"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										},
+										{
+											"key": "rad",
+											"value": "yes"
+										}
+									]
+								}
+							},
+							"response": []
+						},
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"0.9625976995964054\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/cos/327?mode=int&rad=yes",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"cos",
-								"327"
-							],
-							"query": [
+							"name": "Тангенс 3Pi/2 (дробь, градусы)",
+							"event": [
 								{
-									"key": "mode",
-									"value": "int"
-								},
-								{
-									"key": "rad",
-									"value": "yes"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body is correct\", function () {\r",
+											"    pm.response.to.have.body(\"Can't calculate tangens for this number\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Косинус (дробь, градусы)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"0.6530241527544608\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/cos/49.23?mode=float&rad=no",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
 							],
-							"path": [
-								"cos",
-								"49.23"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "float"
-								},
-								{
-									"key": "rad",
-									"value": "no"
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://rudbeckiya.pythonanywhere.com/tan/4.7123889803846898576939650749193?mode=float&rad=no",
+									"protocol": "https",
+									"host": [
+										"rudbeckiya",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan",
+										"4.7123889803846898576939650749193"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "float"
+										},
+										{
+											"key": "rad",
+											"value": "no"
+										}
+									]
 								}
-							]
+							},
+							"response": []
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Тангенс (целое, радианы)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"3.17658221611215\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/tan/3856?mode=int&rad=yes",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"tan",
-								"3856"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "int"
-								},
-								{
-									"key": "rad",
-									"value": "yes"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Тангенс (дробь, градусы)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"0.049574742257696064\");\r",
-									"});"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://rudbeckiya.pythonanywhere.com/tan/2.8381?mode=float&rad=no",
-							"protocol": "https",
-							"host": [
-								"rudbeckiya",
-								"pythonanywhere",
-								"com"
-							],
-							"path": [
-								"tan",
-								"2.8381"
-							],
-							"query": [
-								{
-									"key": "mode",
-									"value": "float"
-								},
-								{
-									"key": "rad",
-									"value": "no"
-								}
-							]
-						}
-					},
-					"response": []
+					]
 				}
 			]
 		}
